@@ -30,13 +30,13 @@ class Currency:
 # Return the abbreviated input
 def find(input):
 
-    from csv import DictReader
+    from csv import DictReader, Reader
 
     with open("currency_names.csv") as newfile:
         reader = DictReader("currency_names.csv")
         for row in reader:
             print(row)
-    comparison = DictReader("currency_names.csv", dialect='excel')
+    comparison = Reader("currency_names.csv", dialect='excel')
 
     for x in comparison:
         print(x)
