@@ -27,6 +27,20 @@ class Currency:
         # So at this point I would request the json of conversion rates based on 
         pass
 
+# Return the abbreviated input
+def find(input):
+
+    from csv import DictReader
+
+    with open("currency_names.csv") as newfile:
+        reader = DictReader("currency_names.csv")
+        for row in reader:
+            print(row)
+    comparison = DictReader("currency_names.csv", dialect='excel')
+
+    for x in comparison:
+        print(x)
+
 def __main__():
     response = requests.get(e_url)
     exchange_json = response.json()
@@ -48,7 +62,9 @@ def __main__():
 
         exchanges.update({ab[1:]: ex})
 
-    print(exchanges)
+    # print(exchanges)
+    print(find(ab))
+
 
 
 __main__()
