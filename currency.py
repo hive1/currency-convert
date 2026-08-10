@@ -48,7 +48,7 @@ def __main__():
 
         exchanges.update({ab[1:]: ex})
 
-        print(exchanges)
+    print(exchanges)
 
 
 __main__()
