@@ -60,7 +60,7 @@ Each rate is **unidirectional**. If you have `('USD', 'EUR')`, the reverse path 
 A **cycle** is a sequence of currencies where:
 - The starting currency is the base currency
 - The path traverses through intermediate currencies
-- The final currency converts back to the starting currency
+- The final currency converts back  to the starting currency
 
 Example cycle: `(USD, EUR, GBP, USD)`
 
