@@ -29,17 +29,12 @@ class Currency:
 
 # Return the abbreviated input
 def find(input):
+    from csv import reader
 
-    from csv import DictReader, Reader
-
-    with open("currency_names.csv") as newfile:
-        reader = DictReader("currency_names.csv")
-        for row in reader:
-            print(row)
-    comparison = Reader("currency_names.csv", dialect='excel')
-
-    for x in comparison:
-        print(x)
+    with open("currency_names.csv", "r") as file:
+        reader = reader(file)
+        for pair in reader:
+            print(type(pair))
 
 def __main__():
     response = requests.get(e_url)
@@ -64,7 +59,4 @@ def __main__():
 
     # print(exchanges)
     print(find(ab))
-
-
-
 __main__()
